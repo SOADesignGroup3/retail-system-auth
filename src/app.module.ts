@@ -8,10 +8,7 @@ import { AuthModule } from './auth/auth.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      //host: 'localhost',
-      //port: 5432,
       url: 'postgres://bncqhlnr:L7zHdfej3_wc6q3v6Eq28KyvnYmCczQ7@trumpet.db.elephantsql.com/bncqhlnr',
-      //database: 'micro_auth',
       username: 'bncqhlnr',
       password: 'L7zHdfej3_wc6q3v6Eq28KyvnYmCczQ7',
       entities: ['dist/**/*.entity.{ts,js}'],
