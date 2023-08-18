@@ -25,7 +25,11 @@ export class AuthService {
     let auth: Auth = await this.repository.findOne({ where: { email } });
 
     if (auth) {
-      return { status: HttpStatus.CONFLICT, error: ['E-Mail already exists'] };
+      return {
+        status: HttpStatus.CONFLICT,
+        error: ['E-Mail already exists'],
+        message: 'Email already exists',
+      };
     }
 
     auth = new Auth();
@@ -35,7 +39,11 @@ export class AuthService {
 
     await this.repository.save(auth);
 
-    return { status: HttpStatus.CREATED, error: null };
+    return {
+      status: HttpStatus.CREATED,
+      message: 'Registration successful',
+      error: null,
+    };
   }
 
   public async login({
@@ -49,6 +57,7 @@ export class AuthService {
         status: HttpStatus.NOT_FOUND,
         error: ['E-Mail not found'],
         token: null,
+        message: 'Email not found',
       };
     }
 
@@ -62,12 +71,18 @@ export class AuthService {
         status: HttpStatus.NOT_FOUND,
         error: ['Password wrong'],
         token: null,
+        message: 'password wrong',
       };
     }
 
     const token: string = this.jwtService.generateToken(auth);
 
-    return { token, status: HttpStatus.OK, error: null };
+    return {
+      token,
+      status: HttpStatus.OK,
+      message: 'Login successful',
+      error: null,
+    };
   }
 
   public async validate({
