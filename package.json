@@ -18,7 +18,7 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "proto:install": "yarn add git+https://github.com/Timadigwe/retail-system-proto.git",
+    "proto:install": "yarn add git+https://github.com/Nabila070/retail-system-proto.git",
     "proto:auth": "protoc --plugin=node_modules/.bin/protoc-gen-ts_proto -I=./node_modules/retail-system-proto/proto --ts_proto_out=src/auth/ node_modules/retail-system-proto/proto/auth.proto --ts_proto_opt=nestJs=true --ts_proto_opt=fileSuffix=.pb"
   },
   "dependencies": {
@@ -38,7 +38,7 @@
     "passport-jwt": "^4.0.1",
     "pg": "^8.11.2",
     "reflect-metadata": "^0.1.13",
-    "retail-system-proto": "git+https://github.com/Timadigwe/retail-system-proto.git",
+    "retail-system-proto": "git+https://github.com/Nabila070/retail-system-proto.git",
     "rxjs": "^7.8.1",
     "typeorm": "^0.3.17"
   },

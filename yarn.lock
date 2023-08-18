@@ -4670,9 +4670,9 @@ restore-cursor@^3.1.0:
     onetime "^5.1.0"
     signal-exit "^3.0.2"
 
-"retail-system-proto@git+https://github.com/Timadigwe/retail-system-proto.git":
+"retail-system-proto@git+https://github.com/Nabila070/retail-system-proto.git":
   version "1.0.0"
-  resolved "git+https://github.com/Timadigwe/retail-system-proto.git#c324040e4147b337b693a4d7cd02a2cb8559d606"
+  resolved "git+https://github.com/Nabila070/retail-system-proto.git#15772491a91b9cc670b6a56222b216d49e145ff3"
 
 reusify@^1.0.4:
   version "1.0.4"
