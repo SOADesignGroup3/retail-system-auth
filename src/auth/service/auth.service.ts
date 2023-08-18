@@ -28,7 +28,7 @@ export class AuthService {
       return {
         status: HttpStatus.CONFLICT,
         error: ['E-Mail already exists'],
-        message: 'Email already exists',
+        message: 'This Email already exists',
       };
     }
 
@@ -41,7 +41,7 @@ export class AuthService {
 
     return {
       status: HttpStatus.CREATED,
-      message: 'Registration successful',
+      message: 'Registration is successful',
       error: null,
     };
   }
@@ -57,7 +57,7 @@ export class AuthService {
         status: HttpStatus.NOT_FOUND,
         error: ['E-Mail not found'],
         token: null,
-        message: 'E-mail is not found',
+        message: 'E-mail not found',
       };
     }
 
@@ -80,7 +80,7 @@ export class AuthService {
     return {
       token,
       status: HttpStatus.OK,
-      message: 'Login successful',
+      message: 'Login is successful',
       error: null,
     };
   }
