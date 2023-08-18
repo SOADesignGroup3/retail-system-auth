@@ -57,7 +57,7 @@ export class AuthService {
         status: HttpStatus.NOT_FOUND,
         error: ['E-Mail not found'],
         token: null,
-        message: 'E-mail not found',
+        message: 'E-mail is not found',
       };
     }
 
@@ -71,7 +71,7 @@ export class AuthService {
         status: HttpStatus.NOT_FOUND,
         error: ['Password wrong'],
         token: null,
-        message: 'Password wrong',
+        message: 'Password is wrong',
       };
     }
 
